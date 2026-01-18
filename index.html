@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Elite 3D Artist Portfolio featuring cinematic WebGL animations, custom shaders, and immersive digital experiences. Built with Three.js, React, and GSAP." />
+    <meta name="keywords" content="3D portfolio, WebGL, Three.js, GLSL shaders, creative developer, digital artist, interactive design" />
+    <meta name="author" content="Elite 3D Portfolio" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourportfolio.com/" />
+    <meta property="og:title" content="Elite 3D Portfolio - Cinematic WebGL Experiences" />
+    <meta property="og:description" content="Immersive digital experiences crafted with WebGL, Three.js & creative code" />
+    <meta property="og:image" content="https://yourportfolio.com/og-image.jpg" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://yourportfolio.com/" />
+    <meta name="twitter:title" content="Elite 3D Portfolio - Cinematic WebGL Experiences" />
+    <meta name="twitter:description" content="Immersive digital experiences crafted with WebGL, Three.js & creative code" />
+    <meta name="twitter:image" content="https://yourportfolio.com/twitter-image.jpg" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/favicon.ico" />
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#8a2be2" />
+    
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Performance Hints -->
+    <link rel="dns-prefetch" href="https://images.unsplash.com" />
+    
+    <title>Elite 3D Portfolio - Cinematic WebGL & Three.js Experiences</title>
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Elite 3D Developer",
+      "url": "https://yourportfolio.com",
+      "jobTitle": "Creative Developer & 3D Artist",
+      "description": "Creative technologist specializing in WebGL, Three.js, and immersive web experiences",
+      "sameAs": [
+        "https://github.com/yourusername",
+        "https://linkedin.com/in/yourusername",
+        "https://twitter.com/yourusername"
+      ]
+    }
+    </script>
+  </head>
+  
+  <body>
+    <!-- Root Application -->
+    <div id="root"></div>
+    
+    <!-- Loading Screen (Optional) -->
+    <div id="loading-screen" style="
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #050508;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease;
+    ">
+      <div style="text-align: center;">
+        <div style="
+          width: 50px;
+          height: 50px;
+          border: 4px solid rgba(138, 43, 226, 0.3);
+          border-top-color: #8a2be2;
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+          margin: 0 auto 20px;
+        "></div>
+        <p style="
+          color: #8a2be2;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+          font-size: 14px;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+        ">Loading Experience...</p>
+      </div>
+    </div>
+    
+    <style>
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
+    
+    <script>
+      // Remove loading screen once app loads
+      window.addEventListener('load', () => {
+        const loader = document.getElementById('loading-screen');
+        if (loader) {
+          setTimeout(() => {
+            loader.style.opacity = '0';
+            setTimeout(() => loader.remove(), 500);
+          }, 1000);
+        }
+      });
+    </script>
+    
+    <!-- Main Application Script -->
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Analytics (Add your tracking code) -->
+    <!-- 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    -->
+  </body>
+</html>
